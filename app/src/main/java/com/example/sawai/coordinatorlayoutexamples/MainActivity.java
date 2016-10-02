@@ -12,6 +12,7 @@ import android.widget.FrameLayout;
 import com.example.sawai.coordinatorlayoutexamples.Example1.ExFragment;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements ListAdapter.AdapterCallback, FragmentManager.OnBackStackChangedListener{
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.Adapt
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
 
-        mList.add("Example 1");
+        mList.addAll(Arrays.asList("Example 1", "Example 2"));
 
         mListAdapter = new ListAdapter(this, mList);
         mRecyclerView.setAdapter(mListAdapter);
@@ -58,6 +59,13 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.Adapt
             getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.main_container, new ExFragment())
+                    .addToBackStack(null)
+                    .commit();
+
+        } else if (position == 1) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.main_container, new com.example.sawai.coordinatorlayoutexamples.Example2.ExFragment())
                     .addToBackStack(null)
                     .commit();
         }
