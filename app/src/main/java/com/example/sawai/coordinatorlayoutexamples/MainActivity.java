@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.Adapt
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
 
-        mList.addAll(Arrays.asList("Example 1", "Example 2", "Example 3", "Example 4"));
+        mList.addAll(Arrays.asList("Example 1", "Example 2", "Example 3", "Example 4", "Example 5"));
 
         mListAdapter = new ListAdapter(this, mList);
         mRecyclerView.setAdapter(mListAdapter);
@@ -80,6 +80,13 @@ public class MainActivity extends AppCompatActivity implements ListAdapter.Adapt
             getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.main_container, new com.example.sawai.coordinatorlayoutexamples.Example4.ExFragment())
+                    .addToBackStack(null)
+                    .commit();
+
+        } else if (position == 4) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.main_container, new com.example.sawai.coordinatorlayoutexamples.Example5.ExFragment())
                     .addToBackStack(null)
                     .commit();
         }
