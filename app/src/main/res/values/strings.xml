@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CoordinatorLayoutExamples</string>
+
+    <string name="description">
+        The popularity of Android has surged over the past few years, driven by a huge number of excellent devices and apps that have been released lately lifetime. There’s an umpteen number of Android apps designed to help you get your work done in a faster and more efficient manner. On top of that, the vast majority of them are either completely free or work on a freemium model. Network Connections is another handy free tool aimed at network administrators and IT professionals to help them monitor inbound and outbound traffic from and to their Android phone. It tracks all internet connections used by the running services and apps, and let you monitor them via their IP addresses. The app tracks information about each connection including IP address, AS number, Abuse RBL data, PTR etc. and presents it in an easily understandable way.
+    </string>
+
 </resources>
